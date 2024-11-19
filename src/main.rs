@@ -46,8 +46,8 @@ fn main() {
             }
         }
         // Display the results as a table
-        println!("{:<20} {}", "IP Address", "Count");
-        println!("{:-<20} {}", "-", "-----");
+        println!("{:<20} Count", "IP Address");
+        println!("{:-<20} -----", "-");
         for (ip, count) in ip_counts {
             println!("{:<20} {}", ip, count);
         }
