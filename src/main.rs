@@ -18,7 +18,6 @@ fn main() {
     // You can now use args.file
     println!("File path provided: {:?}", args.file);
 
-    // Example: Check if the file exists
     if args.file.exists() {
         println!("The file exists.");
         let file = File::open(args.file).unwrap();
@@ -29,6 +28,7 @@ fn main() {
 
         for line in reader.lines() {
             let line = line.unwrap();
+            // change this regex if needed, make sure to have a capture group `(blah)`
             let re = Regex::new(r"Source IP: '(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})'");
 
             match re {
